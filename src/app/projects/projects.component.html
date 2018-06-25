@@ -1,0 +1,33 @@
+
+
+
+    <div fxLayout="row" fxLayoutWrap  fxLayoutGap="20px">
+ <div *ngFor="let pd of data"  style="padding-left: 1%;padding-top: 5%">
+ 
+   
+<mat-card class="example-card">
+  <a class="link" [routerLink]="['/auth/projects/viewproject/']" fragment="{{pd._id}}" >
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+     
+              <mat-card-title><h3>{{pd.name}}</h3></mat-card-title>
+      
+   
+      <mat-card-subtitle>Start Date: {{pd.startDate| date :  "y-MM-dd"}}</mat-card-subtitle>
+      <mat-card-subtitle>End Date  : {{pd.endDate| date :  "y-MM-dd"}}</mat-card-subtitle>
+    </mat-card-header>
+    <hr>
+  
+    <mat-card-content>
+      <p>
+      {{pd.description}}
+      </p>
+    </mat-card-content>
+  </a>
+    <mat-card-actions>
+        <button mat-button color="accent"  (click)="deleteproject(pd._id)">Delete</button>
+      
+    </mat-card-actions>
+    </mat-card>
+   
+  </div>  </div>

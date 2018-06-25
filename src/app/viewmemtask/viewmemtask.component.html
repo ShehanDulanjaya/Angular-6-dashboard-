@@ -1,0 +1,21 @@
+<div class="form-style-6">
+  <form>
+<tbody>
+      <tr>
+              <th>Task</th>
+              <th>Description</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+             
+            </tr>
+    <tr *ngFor = "let task of tasks">
+        
+        <td>{{task.task}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.startdate| date :  "y-MM-dd"}}</td>
+        <td>{{task.enddate| date :  "y-MM-dd"}}</td>
+       
+    </tr>
+</tbody>
+</form>
+</div>

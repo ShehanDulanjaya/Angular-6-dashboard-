@@ -1,0 +1,50 @@
+
+ <div class="form-style-5">
+        <legend><span class="number">*</span> Add Members</legend>
+<tbody>
+        <tr>
+                <th>Member Name</th>
+                <th>Email</th>
+                <th>Options</th>
+              </tr>
+            </tbody>
+            </div>
+  <div class="form-style-5">
+      <form>
+         
+        <tbody>
+        <tr *ngFor = "let users of user">
+            
+            <td>{{users.name}}</td>
+            <td>{{users.email}}</td>
+            <td><button type="button" class="btn" data-dismiss="modal" (click)="addmem(users.id,users.name)" mdbWavesEffect>Add</button></td>
+        </tr>
+    </tbody>
+  </form>
+  </div>
+  <br><br><br><br>
+
+  <div class="form-style-5">
+        <legend><span class="number">*</span>Members in Project</legend>
+<tbody>
+        <tr>
+                <th>Member Name</th>
+                <th>Email</th>
+                <th>Options</th>
+              </tr>
+            </tbody>
+            </div>
+  <div class="form-style-5">
+      <form>
+         
+        <tbody>
+        <tr *ngFor = "let oldmem of mem">
+            
+            <td>{{oldmem.name}}</td>
+            <td>{{oldmem.email}}</td>
+            <td><button type="button" class="btn1" data-dismiss="modal" (click)="delmem(oldmem._id,oldmem.name)"  mdbWavesEffect>Delete</button></td>
+        </tr>
+    </tbody>
+  </form>
+  </div>
+  <br><br><br><br>

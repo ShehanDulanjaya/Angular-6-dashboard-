@@ -1,0 +1,20 @@
+<div class="form-style-5" align="right">
+    <form>
+    <fieldset>
+    <legend><span class="number">1</span> Project Info</legend>
+    <input type="text"  [(ngModel)]="field1"  name="field1"  placeholder="Project Name *">
+    <textarea [(ngModel)]="field2" name="field2" placeholder="Description"></textarea>
+    <input type="date"  [(ngModel)]="field3" name="field3" placeholder="Start Date *">
+    <input type="date" [(ngModel)]="field4" name="field4" placeholder="End Date *">
+    
+       
+    </fieldset>
+    <fieldset>
+    
+    </fieldset>
+    
+    <input type="submit" value="Update" (click)="updateproj()" />
+    </form>
+
+    
+    </div>

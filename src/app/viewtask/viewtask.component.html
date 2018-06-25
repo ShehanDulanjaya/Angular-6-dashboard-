@@ -1,0 +1,41 @@
+<div class="form-style-5" >
+  <form>
+  <fieldset>
+  <legend><span class="number">1</span> Add Task</legend>
+  <input type="text" [(ngModel)]="field1"  name="field1" placeholder="Task Name *">
+  <textarea [(ngModel)]="field2" name="field2" placeholder="Description"></textarea>
+  <input type="date" [(ngModel)]="field3" name="field3" value="Start Date *">
+  <input type="date" [(ngModel)]="field4" name="field4" placeholder="End Date *">
+  
+     
+  </fieldset>
+  <fieldset>
+  
+  </fieldset>
+  
+  <input type="submit" value="Add" (click)="addtask()"/>
+  </form>
+
+</div>
+<div class="form-style-6">
+    <form>
+  <tbody>
+        <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Options</th>
+              </tr>
+      <tr *ngFor = "let task of tasks">
+          
+          <td>{{task.task}}</td>
+          <td>{{task.description}}</td>
+          <td>{{task.startdate| date :  "y-MM-dd"}}</td>
+          <td>{{task.enddate| date :  "y-MM-dd"}}</td>
+          <td><button type="button" class="btn" data-dismiss="modal" (click)="deleteTask(task.id)" mdbWavesEffect>Delete</button></td>
+      </tr>
+  </tbody>
+</form>
+</div>
+<br><br><br><br>
