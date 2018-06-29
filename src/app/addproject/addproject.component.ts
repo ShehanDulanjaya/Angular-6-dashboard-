@@ -6,7 +6,8 @@ import { Component, OnInit, NgModule } from '@angular/core';
   import { AuthService } from '../service/auth.service';
   import { MatSnackBar } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
+
 
 @NgModule({
   imports: [
@@ -84,8 +85,8 @@ updateproj(){
     name: this.field1,
     description: this.field2,
     startDate: this.field3,
-    endDate: this.field4
-  };
+    endDate: this.field4,
+    userId:localStorage.getItem("userId")  };
 
   this.authservice.UpdProject(newproj,this.projectID).subscribe(res => {
         

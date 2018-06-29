@@ -45,7 +45,7 @@ deleteproject(pid){
   }).then((result) => {
 
     if (result.value) {
-      this.authservice.delProject(pid).subscribe(res => {
+      this.authservice.delProject(pid,localStorage.getItem('userId')).subscribe(res => {
         this.displayProjects();
         this.snackBar.open("Project Successfully Deleted","Done", {
           duration: 2500,

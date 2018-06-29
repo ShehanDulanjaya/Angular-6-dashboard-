@@ -37,7 +37,7 @@ public projectID;
 
     });
       
-    this.gettask();
+    this.gettask(this.projectID);
 
 
 
@@ -62,7 +62,7 @@ public projectID;
       this.snackBar.open("Task Delete Successfull", "refreshing", {
         duration: 2000,
       });
-      this.gettask();
+      this.gettask(this.projectID);
 
 
     },err=> {
@@ -91,7 +91,7 @@ public projectID;
       this.snackBar.open("Task Aded Successfull !", "Refreshing", {
         duration: 2000,
       });
-     this.gettask();
+     this.gettask(this.projectID);
 
 
 },err=> {
@@ -106,8 +106,8 @@ public projectID;
   }
 
 
-gettask(){
-  this.authservice.getTask(this.projectID).subscribe(res => {
+gettask(pid:any){
+  this.authservice.getTask(pid).subscribe(res => {
     this.tasks=res["project"];
   },err=> {
     this.snackBar.open("Project Retrive Failed !","retry", {

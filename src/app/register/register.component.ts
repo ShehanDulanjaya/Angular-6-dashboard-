@@ -35,11 +35,11 @@ password: String;
       'email': 'please enter your vaild email'
     },
     'name': {
-      'required': 'Please enter your name'
+      'required': 'Please enter your name',
+      'name':'Letters Only'
     },
     'password': {
       'required': 'please enter your password',
-      'pattern': 'The password must contain numbers and letters',
       'minlength': 'Please enter more than 4 characters',
       'maxlength': 'Please enter less than 25 characters',
     },
@@ -64,7 +64,6 @@ password: String;
       ],
       'password': ['', [
         Validators.required,
-        Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
         Validators.minLength(6),
         Validators.maxLength(25)
         
@@ -75,6 +74,7 @@ password: String;
         Validators.required,
         
         
+        
       ]
       ],
     });
@@ -83,10 +83,10 @@ password: String;
     this.onValueChanged();
   }
   onValueChanged(data?: any) {
-    // if (!this.userForm) {
+    // if (!this.regForm) {
     //   return;
     // }
-    // const form = this.userForm;
+    // const form = this.regForm;
     // for (const field in this.formErrors) {
     //   if (Object.prototype.hasOwnProperty.call(this.formErrors, field)) {
     //     this.formErrors[field] = '';

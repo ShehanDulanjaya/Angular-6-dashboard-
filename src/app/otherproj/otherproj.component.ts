@@ -35,7 +35,7 @@ export class OtherprojComponent implements OnInit {
   displayProjects(){
     this.authservice.getotherProj(localStorage.getItem("userId")).subscribe(res => {
       this.data=res['projectmems'];
-      console.log(this.data);
+      //console.log(this.data);
 
     },err=> {
       this.snackBar.open("FAiled to load", "Retry", {

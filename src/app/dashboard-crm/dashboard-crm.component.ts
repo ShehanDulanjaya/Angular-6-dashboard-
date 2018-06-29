@@ -55,6 +55,7 @@ getadmincount(){
   var data_:any;
    this.authservice.getOthercount(localStorage.getItem("userId")).subscribe(dat => {     
         data_=dat;
+        console.log(data_);
       this.ca=  (data_[1].adminLive)
        this.da= (data_[1].adminDone)
         this.co=(data_[0].otherLive)

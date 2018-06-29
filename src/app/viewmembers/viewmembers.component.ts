@@ -110,7 +110,7 @@ this.snackBar.open("Member delete Failed", "Retry!", {
 
 
 viewmem(){
-  this.authservice.getallusers().subscribe(res => {
+  this.authservice.getallusers(localStorage.getItem('email')).subscribe(res => {
     this.user=res["users"];
   },err=> {
     this.snackBar.open("User Retrive Failed !","retry", {

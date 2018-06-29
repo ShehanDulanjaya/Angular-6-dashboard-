@@ -19,7 +19,7 @@ export class ViewmemtaskComponent implements OnInit {
 
     });
       
-    this.gettask();
+    this.gettask(this.projectID);
  
    }
 
@@ -29,8 +29,8 @@ export class ViewmemtaskComponent implements OnInit {
 
 
 
-  gettask(){
-    this.authservice.getTask(this.projectID).subscribe(res => {
+  gettask(pid:any){
+    this.authservice.getTask(pid).subscribe(res => {
       this.tasks=res["project"];
     },err=> {
       this.snackBar.open("Project Retrive Failed !","retry", {

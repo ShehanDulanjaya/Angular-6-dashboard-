@@ -57,7 +57,7 @@ addproj(){
 
 
 },err=> {
-this.snackBar.open("Task Aded Failed", "Retry!", {
+this.snackBar.open("Project Aded Failed", "Retry!", {
   duration: 2000,
 });
 
